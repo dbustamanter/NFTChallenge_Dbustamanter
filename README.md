@@ -36,60 +36,7 @@ Users should be able to:
 
 In this challenge i've learned to make a hover effect, using transitions and overlay images:
 
-/*HOVER EFFECT*/
-.fade {
-    position: relative;
-    width: auto;
-    height: auto;
-  }
-  
-  .image {
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
-  .middle {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 17rem;
-    height: 17rem;
-    background-color: rgba(0, 255, 247, 0.5);
-    border-radius: .5rem;
-    transition: .5s ease;
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-  }
-  
-  .fade:hover .image {
-    opacity: 0.8;
-  }
-
-  .fade:active .image{
-      opacity: 0.8;
-  }
-  
-  .fade:hover .middle {
-    opacity: 1;
-  }
-
-  .fade:active .middle{
-      opacity: 1;
-  }
-  
-  .eye {
-    color: #ffff;
-    padding: 16px 32px;
-    background-color: none;
-  }
-  /*---------------------------------------------*/
-
+![Alt text](/design/solution/Screen%20Shot%202022-05-17%20at%2021.03.20.png "CSS")
 
 ### Useful resources
 
