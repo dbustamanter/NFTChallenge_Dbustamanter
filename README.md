@@ -2,24 +2,8 @@
 
 This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. It was coded by https://github.com/dbustamanter
 
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
-
+This challenge helped me to practice HTML + CSS coding. Using some flexbox layout, that make the design easier, and usign the Mobile-first workflow.
 ### The challenge
 
 Users should be able to:
@@ -28,7 +12,10 @@ Users should be able to:
 - See hover states for interactive elements
 
 ### Screenshot
-The Screenshots of the solution are located at ./design/solution
+![Alt text](/design/solution/Screen%20Shot%202022-05-17%20at%2020.17.59.png "Responsive deploy")
+![Alt text](/design/solution/Screen%20Shot%202022-05-17%20at%2020.20.45.png "Mobile hover")
+![Alt text](/design/solution/Screen%20Shot%202022-05-17%20at%2020.23.03.png "Web deploy")
+![Alt text](/design/solution/Screen%20Shot%202022-05-17%20at%2020.23.12.png "Web hover")
 
 ### Links
 
@@ -44,62 +31,74 @@ The Screenshots of the solution are located at ./design/solution
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this challenge i've learned to make a hover effect, using transitions and overlay images:
 
-To see how you can add code snippets, see below:
+/*HOVER EFFECT*/
+.fade {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17rem;
+    height: 17rem;
+    background-color: rgba(0, 255, 247, 0.5);
+    border-radius: .5rem;
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+  
+  .fade:hover .image {
+    opacity: 0.8;
+  }
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+  .fade:active .image{
+      opacity: 0.8;
+  }
+  
+  .fade:hover .middle {
+    opacity: 1;
+  }
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+  .fade:active .middle{
+      opacity: 1;
+  }
+  
+  .eye {
+    color: #ffff;
+    padding: 16px 32px;
+    background-color: none;
+  }
+  /*---------------------------------------------*/
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Overlay effects](https://www.w3schools.com/howto/howto_css_image_overlay.asp) - This helped me for Hover effects on the NFT's image.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- LinkedIn - [Diego Bustamante R.](https://www.linkedin.com/in/dbustamanter/)
+- Frontend Mentor - [@dbustamanter](https://www.frontendmentor.io/profile/dbustamanter)
 
 ## Got feedback for us?
 
